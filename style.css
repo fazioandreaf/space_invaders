@@ -1,0 +1,133 @@
+:root {
+	--cell-size: 40px;
+	--grid-size: 15;
+	--bg-color: #3535ec;
+	--accent-color: #f70d68;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg-color);
+	font-family: "Press Start 2P", cursive;
+
+	line-height: 1.4;
+	color: #ffffff;
+}
+
+.container {
+	width: 600px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin: 50px auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	margin-bottom: 16px;
+}
+
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--accent-color);
+}
+
+/* STRUTTURA BASE PAGINE DEI GIOCHI */
+
+.board {
+	display: flex;
+	flex-direction: row;
+}
+
+.game-area {
+	padding: 12px;
+
+	position: relative;
+}
+
+.game-data {
+	padding: 12px;
+	width: 240px;
+}
+
+h1 {
+	font-size: 36px;
+	margin-bottom: 16px;
+}
+
+p {
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+/* ALERT */
+
+.game-alert {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.game-alert-message {
+	font-size: 40px;
+	padding: 20px;
+
+	background-color: var(--accent-color);
+}
+
+#grid {
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(var(--cell-size) * var(--grid-size) + 4px);
+	height: calc(var(--cell-size) * var(--grid-size) + 4px);
+	border: 2px solid white;
+}
+
+#grid .b_singlecell {
+	width: var(--cell-size);
+	height: var(--cell-size);
+	font-size: 8px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.alien {
+	background-image: url("./images/alien.png");
+}
+
+.spaceship {
+	background-image: url("./images/spaceship.png");
+}
+
+.laser {
+	background-image: url("./images/laser.png");
+}
+
+.boom {
+	background-image: url("./images/boom.png");
+}
